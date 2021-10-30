@@ -19,7 +19,6 @@ public class UserController {
         System.out.println(user.toString());
         String token = userService.login(user.getUsername(), user.getPwd());
         System.out.println(token);
-        System.out.println(1);
         return token!=null?JsonData.buildSuccess(token):JsonData.buildError("账号密码错误！");
     }
     @GetMapping("list_user")
